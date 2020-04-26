@@ -9,4 +9,5 @@
         <td><%= @book.title %></td>
         <td><%= @book.body %></td>
 </table>
+        <%= link_to "Destroy", book_path(@book.id), method: :delete, data: { confirm: "本当に消しますか？" }, class: "btn-sm btn-danger destroy_book_26090" %>
 </div>
