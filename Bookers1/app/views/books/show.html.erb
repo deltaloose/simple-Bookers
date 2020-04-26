@@ -9,5 +9,7 @@
         <td><%= @book.title %></td>
         <td><%= @book.body %></td>
 </table>
+	<% if @book.user == current_user %>
         <%= link_to "Destroy", book_path(@book.id), method: :delete, data: { confirm: "本当に消しますか？" }, class: "btn-sm btn-danger destroy_book_26090" %>
+    <% end %>
 </div>
