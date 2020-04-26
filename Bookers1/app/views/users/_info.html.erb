@@ -1,0 +1,19 @@
+<h2>User info</h2>
+<img class="attachment user profile_image fallback" src="" alt="No image">
+		<tbody>
+			<table class="table">
+				<tr>
+					<%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', class: "attachment user profile_image" %>
+				</tr>
+			</table>
+			<table class="table">
+		    	<tr>
+		    	  <th>name</th>
+		    	  <th><%= current_user.name %></th>
+				</tr>
+				<tr>
+					<th>introduction</th>
+				</tr>
+			</table>
+					<a class="col-xs-12 btn btn-default glyphicon glyphicon-wrench"<%= link_to "",edit_user_path(current_user) %>
+					</a>
