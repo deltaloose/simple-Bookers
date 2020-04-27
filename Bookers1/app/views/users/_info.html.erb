@@ -1,21 +1,25 @@
 <h2>User info</h2>
-		<tbody>
-			<table class="table">
-				<tr>
-					<%= attachment_image_tag current_user, :profile_image, size:"100x100", fallback:"no_image.jpg", size: '100x100' %>
-				</tr>
-			</table>
-			<table class="table">
-		    	<tr>
-		    	  <th>name</th>
-		    	  <th><%= current_user.name %></th>
-				</tr>
-				<tr>
-					<th>introduction</th>
-				</tr>
-			</table>
-					<% if user == current_user %>
-					<%= link_to "",edit_user_path(current_user), class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
-					<% else %>
-					<%= link_to "",user_path(current_user), class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
-					<% end %>
+	<tbody>
+		<table class="table">
+			<tr>
+				<%= attachment_image_tag current_user, :profile_image, size:"100x100", fallback:"no_image.jpg", size: '100x100' %>
+			</tr>
+		</table>
+		<table class="table">
+			<div class="row">
+	    	<tr>
+	    	  <th>name</th>
+	    	  <th><%= current_user.name %></th>
+			</tr>
+			<tr>
+				<th>introduction</th>
+			</tr>
+		</table>
+		<div class="row">
+			<% if user == current_user %>
+			<%= link_to "",edit_user_path(current_user), class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
+			<% else %>
+			<%= link_to "",user_path(current_user), class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
+			<% end %>
+		</div>
+	</tbody>

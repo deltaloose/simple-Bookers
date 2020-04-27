@@ -1,8 +1,5 @@
 class BooksController < ApplicationController
 	before_action :authenticate_user!
-
-	def top
-	end
 	def create
 		@book = Book.new(book_params)
 		@book.user_id = current_user.id
@@ -20,6 +17,19 @@ class BooksController < ApplicationController
 	end
 	def show
 		@book = Book.find(params[:id])
+	end
+	def edit
+		@book = Book.find(params[:id])
+	end
+	def update
+		@book = Book.find(params[:id])
+		@book.user_id = current_user.id
+		if @book.update(book_params)
+		flash[:notice] = 'Book was successfully update'
+      	redirect_to book_path(@book.id)
+        else
+        render :edit
+        end
 	end
 	def destroy
 		@book = Book.find(params[:id])
