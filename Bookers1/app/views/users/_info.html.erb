@@ -2,7 +2,7 @@
 		<tbody>
 			<table class="table">
 				<tr>
-					<%= attachment_image_tag user, :profile_image, size:"100x100", fallback:"no_image.jpg", size: '100x100' %>
+					<%= attachment_image_tag current_user, :profile_image, size:"100x100", fallback:"no_image.jpg", size: '100x100' %>
 				</tr>
 			</table>
 			<table class="table">
