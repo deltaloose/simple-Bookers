@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   root to: 'homes#top'
   resources :users
   resources :books
-  get "homes/about"
+  get "home/about" => "homes#about"
 end

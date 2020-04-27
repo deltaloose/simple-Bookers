@@ -5,8 +5,8 @@
 	<%= form_for(@book, url:"/books/#{@book.id}") do |f| %>
 		<% if @book.errors.any? %>
 		<h3 class="text-danger"><%= @book.errors.count %>errors prohibited this book from being saved:</h3>
-		<ul class="text-danger">
 			<% @book.errors.full_messages.each do |msg| %>
+			<ul class="text-danger">
 			<li><%= msg %></li></ul>
 			<% end %>
 		<% end %>
