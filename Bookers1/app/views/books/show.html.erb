@@ -25,8 +25,11 @@
     <% end %></td>
 <%= render 'favorites/favorite', book: @book %>
 </table>
-    <table class="col-xs-9">
-                
-    </table>
+    <div class="col-xs-9">
+	    <%= form_with(model: [@book, @comment], local: true) do |f| %>
+	    	<%= f.text_area :comment, :size=>"70x5" %>
+		    <%= f.submit '送信' %>
+		<% end %>
+    </div>
 </div>
 </div>
