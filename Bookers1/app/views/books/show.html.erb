@@ -23,6 +23,10 @@
 	<td><% if @book.user == current_user %>
         <%= link_to "Destroy", book_path(@book.id), method: :delete, data: { confirm: "本当に消しますか？" }, class: "btn-sm btn-danger destroy_book_26090" %>
     <% end %></td>
+<%= render 'favorites/favorite', book: @book %>
 </table>
+    <table class="col-xs-9">
+                
+    </table>
 </div>
 </div>
